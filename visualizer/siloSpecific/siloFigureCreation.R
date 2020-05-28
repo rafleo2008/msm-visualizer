@@ -14,6 +14,7 @@ baseSiloPlot <- reactive({
     }
   } else if(input$siloAspatialLevel == "Persons"){
     if(input$siloPpLevel == "Age"){
+        ## People range should be dynamic
       if(input$pyramid == FALSE){
         myPlot <- msmPyramidLines(siloPlotSubset, msmQualitative[c(3, 4)] )
       } else{
